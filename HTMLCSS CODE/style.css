@@ -12,11 +12,20 @@ nav{
     background-color: #222;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 nav a{ 
-    position: relative;
-    top:20px;
+    display: inline-block;
     text-decoration: none;
     color: white;
+    z-index: 1;
+}
+
+nav span{
+    position: absolute;
+    background-color: aqua;
+    height:60px;
+    width:100px;
+    border-radius: 10px;
 }
