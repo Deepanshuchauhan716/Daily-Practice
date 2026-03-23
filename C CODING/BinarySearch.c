@@ -2,11 +2,13 @@
 
 int BinarySearch(int arr[],int key,int left,int right){
 
-     int mid = left + (right - left) / 2;
+     
 
      while (left <= right)
      {
-       if(arr[mid]== key){
+        int mid = left + (right - left) / 2;
+
+       if(arr[mid] == key){
         return mid;
        }
        if(key > arr[mid]){
@@ -15,9 +17,9 @@ int BinarySearch(int arr[],int key,int left,int right){
        if(key < arr[mid]){
         right = mid - 1;
        }
-        return -1;
+       
      }
-     
+      return -1;
 
 }
 int main(){
@@ -26,6 +28,15 @@ int main(){
     int n = 4;
     int key;
 
-    int result = BinarySearch(arr,45, 0, n - 1);
+    printf("Enter element : ");
+    scanf("%d",&key);
+
+    int result = BinarySearch(arr,key, 0, n - 1);
+
+    if(result != -1){
+        printf("Element %d found at %d index",key,result);
+    }else{
+        printf("Element %d not found",key);
+    }
     return 0;
 }
