@@ -1,14 +1,12 @@
+
 body{
     background-color: black;
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
 }
-
 nav{
     position: relative;
-    height:60px;
+    height:50px;
     width:100%;
     background-color: #222;
     display: flex;
@@ -31,7 +29,7 @@ nav span{
     left:0px;
     position: absolute;
     background: linear-gradient(45deg ,#194b4f,#33fffc);
-    height:60px;
+    height:50px;
     width:150px;
     border-radius: 10px;
     transition: 1s;
@@ -41,16 +39,16 @@ nav a:nth-child(1):hover~span{
     left:0px;
 }
 nav a:nth-child(2):hover~span{
-    left:175px;
+    left:219px;
 }
 nav a:nth-child(3):hover~span{
-    left:370px;
+    left:440px;
 }
 nav a:nth-child(4):hover~span{
-    left:570px;
+    left:670px;
 }
 nav a:nth-child(5):hover~span{
-    left:740px;
+    left:860px;
 }
 
 #search {
