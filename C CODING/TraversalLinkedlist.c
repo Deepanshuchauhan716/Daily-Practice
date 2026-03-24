@@ -16,5 +16,14 @@ int main(){
     second = (struct node*)malloc(sizeof(struct node));
     third = (struct node*)malloc(sizeof(struct node));
 
+    head->data  = 12;
+    head->next = second;
+
+    second->data = 23;
+    second->next = third;
+
+    third->data= 45;
+    third->next = NULL;
+
     return 0;
 }
