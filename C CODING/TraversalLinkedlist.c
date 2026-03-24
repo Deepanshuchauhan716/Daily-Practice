@@ -6,6 +6,13 @@ struct node{
     struct node * next;
 };
 
+struct node * TraversalNode(struct node *ptr){
+
+    while(ptr != NULL){
+        printf("%d ",ptr->data);
+    }
+}
+
 int main(){
 
     struct node * head;
@@ -24,6 +31,8 @@ int main(){
 
     third->data= 45;
     third->next = NULL;
+
+    TraversalNode(head);
 
     return 0;
 }
