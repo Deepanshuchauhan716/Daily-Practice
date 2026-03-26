@@ -9,3 +9,8 @@ function test(){
 test();
 console.log(a);
 // This is invalid because a print outside function
+if(true){
+    var a = 5;
+}
+
+console.log(a);
