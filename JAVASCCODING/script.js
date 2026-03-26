@@ -10,3 +10,6 @@ console.log(one);
 // let me hum same naam ke variable ko 2 baar use nhi kr skte
 let one = 1;
 let one = 2;
+
+console.log(one);
+
