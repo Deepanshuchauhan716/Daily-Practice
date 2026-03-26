@@ -8,8 +8,9 @@ console.log(one);
 
 // let variable in js
 // let me hum same naam ke variable ko 2 baar use nhi kr skte
-let one = 1;
-let one = 2;
+let three = 3;
+let four = 2;
 
-console.log(one);
+console.log(three);
+console.log(four);
 
