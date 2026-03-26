@@ -1,18 +1,6 @@
-// Data types in js
-// Refrence Data type
+// Auto conversion
 
-let Student = {
-    name:"Deepanshu",
-    age:13
-};
-
-console.log(Student);
-
-let arr = [12,34,56,78];
-console.log(arr);
-
-function test(){
-    let a = 12;
-    console.log(a);
-}
-test();
+let a = "5" + 1;
+console.log(a);//output 51
+let b = "5" - 1;
+console.log(b);//output 4
