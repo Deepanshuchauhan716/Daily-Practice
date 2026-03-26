@@ -1,16 +1,11 @@
 // Scope in js
 // Function scope and Block scope in js
-//  1 => Var ek function scope hai!! Jo function ki respect krta hai
+//  1 => Let & Const jo ki Block scopes hai ye {} ki respect krte hai !!
 
-function test(){
-    var a = 5;
-    
-}
-test();
-console.log(a);
-// This is invalid because a print outside function
 if(true){
-    var a = 5;
+    let a = 12;
+    const b = 13;
+    console.log(a,b);  //This is valid✅
 }
 
-console.log(a);
+console.log(a,b); //This is not valid becoz let and const respect {} !!
