@@ -4,8 +4,8 @@
 
 function test(){
     var a = 5;
-    console.log(a);
+    
 }
-
 test();
-// This is valid because a print inside function
+console.log(a);
+// This is invalid because a print outside function
