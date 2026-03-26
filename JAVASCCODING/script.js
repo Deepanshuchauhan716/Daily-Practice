@@ -1,9 +1,16 @@
-// PRACTICE ZONE
-// declare ur name and city using const and age using let Try and observe!!
+// Data types in js
+// premetive data types!!
 
-const name = "Deepanshu";
-const city = "Uttrakhand";
-let age = 19;
-console.log(name);
-console.log(city);
-console.log(age);
+let name = "Deepanshu"; //String
+
+let a = 4; //number
+
+let Istrue = true; //Boolean
+
+console.log(x);
+
+let x = 10; //undefined
+
+let y = null;
+
+let big = 23456787654567876n; //Bigint
