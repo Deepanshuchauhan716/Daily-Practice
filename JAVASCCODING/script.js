@@ -1,10 +1,12 @@
 // Hoisting in java script!!
 // JS prepare memory before Running code it move all decalaration to the top!
+// Let and Const
 
 console.log(a);
-var a = 10;  //Output is Undefined 
+console.log(b);
+let a = 10; 
+const b = 12;
 
-// In Memory 
-// 1 => var a;
-// 2 => console.log(a);
-// 3 => a = 10;  This is the reseaon Undefined✅
+// Refrence Error✅ Bcox hum Declaration se phle Print kra rha hai !! Not undefined❌
+
+
