@@ -19,5 +19,7 @@ console.log(three);
 // const me hum na hi value assign kr skte hai aur na hi same name ke variable ko 2 baar use kr skte hai!
 
 const myname = "Deepanshu";
-const myname = "Dheeraj";
+      myname = "Dheeraj";
+
+console.log(myname);
 
