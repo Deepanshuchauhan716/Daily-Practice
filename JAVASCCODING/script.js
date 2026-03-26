@@ -1,16 +1,18 @@
 // Data types in js
-// premetive data types!!
+// Refrence Data type
 
-let name = "Deepanshu"; //String
+let Student = {
+    name:"Deepanshu",
+    age:13
+};
 
-let a = 4; //number
+console.log(Student);
 
-let Istrue = true; //Boolean
+let arr = [12,34,56,78];
+console.log(arr);
 
-console.log(x);
-
-let x = 10; //undefined
-
-let y = null;
-
-let big = 23456787654567876n; //Bigint
+function test(){
+    let a = 12;
+    console.log(a);
+}
+test();
