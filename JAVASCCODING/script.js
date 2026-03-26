@@ -1,12 +1,9 @@
-// Hoisting in java script!!
-// JS prepare memory before Running code it move all decalaration to the top!
-// Let and Const
+// PRACTICE ZONE
+// declare ur name and city using const and age using let Try and observe!!
 
-console.log(a);
-console.log(b);
-let a = 10; 
-const b = 12;
-
-// Refrence Error✅ Bcox hum Declaration se phle Print kra rha hai !! Not undefined❌
-
-
+const name = "Deepanshu";
+const city = "Uttrakhand";
+let age = 19;
+console.log(name);
+console.log(city);
+console.log(age);
