@@ -1,6 +1,11 @@
-// But agar const koi object ya array ho to const ki value change kr skte hai!!
+// Scope in js
+// Function scope and Block scope in js
+//  1 => Var ek function scope hai!! Jo function ki respect krta hai
 
-const Student = {name : "Deepanshu"};
-Student.name = "Sahil";
-console.log(Student);
+function test(){
+    var a = 5;
+    console.log(a);
+}
 
+test();
+// This is valid because a print inside function
