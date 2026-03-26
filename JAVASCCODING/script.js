@@ -15,3 +15,9 @@ console.log(three);
 
 // lekin hum value change kr skte hai
 
+// const variable in js
+// const me hum na hi value assign kr skte hai aur na hi same name ke variable ko 2 baar use kr skte hai!
+
+const myname = "Deepanshu";
+const myname = "Dheeraj";
+
