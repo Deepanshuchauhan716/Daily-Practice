@@ -1,7 +1,7 @@
-// Function Expression = Function ko variable ki tarah use krna
+// Arrow function
 
-let greet = function(){
-    console.log("Hello world");
-};
+ let variable = (a,b) => {
+    console.log(a + b);
+}
 
-greet();
+variable(4,5);
