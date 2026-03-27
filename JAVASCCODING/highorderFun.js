@@ -1,5 +1,5 @@
-// IIFE
+// Array in java script
 
-(function(){
-    console.log("Run fast");
-})();
+let student = [12,34,56,7,56,43];
+console.log(student.length);
+console.log(student);
