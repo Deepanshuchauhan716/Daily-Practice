@@ -1,9 +1,7 @@
-// Early Return Pattern !
-// used in function to exit early if some condition fails
+// Function Parameter & Argument!!
 
-function checkAge(age){
-    if(age < 18) return "Denied";
-    return "Allowed";
+function greet(name){  //name is a parameter
+    console.log("Hello "+name);
 }
 
-console.log(checkAge(22));
+greet("Deepanshu");//Deepanshu is a argument
