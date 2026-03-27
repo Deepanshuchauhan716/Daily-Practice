@@ -1,7 +1,7 @@
-// Function Parameter & Argument!!
+// Function Expression = Function ko variable ki tarah use krna
 
-function greet(name){  //name is a parameter
-    console.log("Hello "+name);
-}
+let greet = function(){
+    console.log("Hello world");
+};
 
-greet("Deepanshu");//Deepanshu is a argument
+greet();
