@@ -1,7 +1,19 @@
-// Arrow function
+// FIRST CLASS FUNCTION!!
+// Assign a function to a variable
 
- let variable = (a,b) => {
-    console.log(a + b);
+let Printhello = function(){
+    console.log("Hello");
+}
+Printhello();
+// passing a function as an argument
+function sayHi() {
+  console.log("Hello");
 }
 
-variable(4,5);
+function test(x) {
+  x();
+}
+
+test(sayHi);
+
+// Returning a function
