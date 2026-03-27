@@ -1,6 +1,11 @@
-// Auto conversion
+// conditions in java script
+// if,else if,else
+let marks = 89;
 
-let a = "5" + 1;
-console.log(a);//output 51
-let b = "5" - 1;
-console.log(b);//output 4
+if(marks >= 90){
+    console.log("A");
+}else if(marks >= 75){
+    console.log("B");
+}else{
+    console.log("C");
+}
