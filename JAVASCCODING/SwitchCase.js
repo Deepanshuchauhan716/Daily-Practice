@@ -1,14 +1,9 @@
-// Switch case in js
+// Early Return Pattern !
+// used in function to exit early if some condition fails
 
-let fruit = "Apple";
-
-switch(fruit){
-    case "Banana":
-        console.log("Yellow");
-        break;
-    case "Apple":
-        console.log("Red");
-        break;
-    default:
-        console.log("Unknown");
+function checkAge(age){
+    if(age < 18) return "Denied";
+    return "Allowed";
 }
+
+console.log(checkAge(22));
