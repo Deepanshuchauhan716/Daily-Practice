@@ -1,4 +1,4 @@
-function test(){
-    let x = 12;
-    console.log(x);
-}
+let arr = [1, 2];
+arr.push(3);
+
+console.log(arr);
