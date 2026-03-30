@@ -24,6 +24,25 @@ struct node * DeletionAtBegin(struct node *head){
     return head;
 }
 
+struct node * DeletionAtBetween(int index,struct node * head){
+
+    struct node * temp = head;
+
+    for(int i = 0; i < index - 1; i++){
+        temp = temp->next;
+    }
+
+    struct node * del = temp->next;
+
+    temp->next = del->next;
+
+    free(del);
+
+    return head;
+
+
+}
+
 int main(){
     struct node * head;
     struct node * second;
@@ -51,5 +70,8 @@ int main(){
     PrintElements(head);
     printf("After Deletion at begin : ");
     head = DeletionAtBegin(head);
+    PrintElements(head);
+    printf("after deletion : ");
+    head = DeletionAtBetween(2,head);
     PrintElements(head);
 }
