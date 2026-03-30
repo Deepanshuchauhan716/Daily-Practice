@@ -5,6 +5,15 @@ struct node
     struct node*next;
 };
 
+struct node PrintElements(struct node * ptr){
+    while (ptr != NULL)
+    {
+        printf("%d ",ptr->data);
+        ptr =  ptr->next;
+    }
+    
+}
+
 int main(){
     struct node*head;
     struct node*second;
@@ -22,4 +31,6 @@ int main(){
 
     third->data = 14;
     third->next = NULL;
+
+    PrintElements(head);
 }
