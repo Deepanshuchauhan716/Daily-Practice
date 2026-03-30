@@ -36,6 +36,20 @@ struct node * InsertionAtBetween(struct node * head, int index,int value){
 
 }
 
+struct node* InsertionAtlast(struct node * head, int value){
+    struct node * temp = head;
+
+    while(temp->next != NULL){
+        temp = temp->next;
+    }
+
+    struct node * sec_node = (struct node *)malloc(sizeof(struct node));
+    sec_node->data = value;
+    sec_node->next = NULL;
+
+    temp->next = sec_node;
+}
+
 int main(){
     struct node*head;
     struct node*second;
@@ -61,6 +75,9 @@ int main(){
     PrintElements(head);
     printf("After Insertion At Between : ");
     InsertionAtBetween(head,2,25);
+    PrintElements(head);
+    printf("After insertion at end : ");
+    InsertionAtlast(head,45);
     PrintElements(head);
 
     return 0;
