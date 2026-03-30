@@ -14,6 +14,13 @@ struct node PrintElements(struct node * ptr){
     
 }
 
+struct node * InsertionAtBegin(struct node * head,int new_data){
+    struct node * ptr = (struct node*)malloc(sizeof(struct node));
+    ptr->next = head;
+    ptr->data = new_data;
+    return ptr;
+}
+
 int main(){
     struct node*head;
     struct node*second;
