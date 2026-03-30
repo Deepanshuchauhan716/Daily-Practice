@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 struct node
 {
     int data;
@@ -11,7 +12,7 @@ struct node PrintElements(struct node * ptr){
         printf("%d ",ptr->data);
         ptr =  ptr->next;
     }
-    
+    printf("\n");
 }
 
 struct node * InsertionAtBegin(struct node * head,int new_data){
@@ -40,4 +41,8 @@ int main(){
     third->next = NULL;
 
     PrintElements(head);
+    head = InsertionAtBegin(head,56);
+    PrintElements(head);
+
+    return 0;
 }
