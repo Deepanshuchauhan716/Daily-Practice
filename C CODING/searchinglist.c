@@ -7,6 +7,27 @@ struct node
     struct node * next;
 };
 
+void PrintElements(struct node * ptr){
+
+    while(ptr != NULL){
+        printf("%d ",ptr->data); 
+        ptr = ptr->next;
+    }
+   printf("\n");
+}
+int  SearchingList(struct node * head, int key){
+
+    struct node * temp = head;
+    int position = 1;
+    while(temp != NULL){
+        if(temp->data == key){
+            return position;
+        }
+        temp = temp->next;
+        position++;
+    }
+    return -1;
+}
 int main(){
 
     struct node * head;
@@ -30,4 +51,18 @@ int main(){
 
     forth->data = 15;
     forth->next = NULL;
+
+    printf("Original Elements are : ");
+    PrintElements(head);
+    int key;
+    printf("Enter key element : ");
+    scanf("%d",&key);
+    int position = SearchingList(head,key);
+
+    if(position != -1){
+        printf("Element %d found at index %d ",key,position);
+    }
+    else{
+        printf("Element %d not found  ", key);
+    }
 }
