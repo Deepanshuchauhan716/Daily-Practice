@@ -51,10 +51,10 @@ a.active::after{
 
 select{
   height:30px;
-  width:100px;
+  width:70px;
   background-color: transparent;
   color: white;
-  border:2px solid black;
+  border:none;
   border-radius: 6px;
 }
 
@@ -62,4 +62,56 @@ select{
   position: absolute;
   left: 100px;
   top:100px;
+}
+
+.card{
+  position: relative;
+  top:160px;
+  left:110px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  height: auto;
+  width: 800px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  border:1px solid #e5e7eb;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-bottom-right-radius: 90px;
+}
+
+.img1{
+  height:50px;
+  width:50px;
+  position:relative;
+  bottom: 27px;
+}
+.img2{
+  height:41px;
+  width:41px;
+  position:relative;
+  bottom: 26px;
+}
+.img3{
+  height:60px;
+  width:60px;
+  position:relative;
+  left:20px;
+  bottom: 24px;
+}
+
+.head1{
+  position: relative;
+  bottom: 30px;
+}
+.head2{
+  position: relative;
+  bottom: 25px;
+  font-size: 16px;
+}
+.head3{
+  position: relative;
+  bottom: 35px;
+  font-size: 16px;
 }
