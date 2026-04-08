@@ -100,40 +100,31 @@ body{
     transform: scale(0.95);
 }
 
-.card{
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height:350px;
-  position: relative;
-  top:100px;
-  color: black;
-  text-decoration: none;
-  background-color:#55689b; 
-  padding: 10px 15px; 
-  margin: 15px 20px;
-  border-radius: 8px;
+.card {
+    width:1300px;
+    margin:300px auto 0 auto;
+    margin-top: 100px;
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid black;
 }
 
-#student_table{
-    position: relative;
-    bottom: 150px;
-    width:100%;
+#student_table {
+    width: 100%;
     border-collapse: collapse;
-    background-color: white;
 }
 
-th,td{
-    border:1px solid #ddd;
-    padding:12px;
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
 }
 
-th{
-    background-color: #d3e1d3;
-    color:black;
+th {
     position: sticky;
-    top:0;
+    top: 0;
+    background-color: #6e8bda;
+    color: white;
 }
 
 
