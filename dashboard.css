@@ -207,3 +207,16 @@ select{
   width:40px;
   border-radius: 50%;
 }
+
+.logout{
+  height:30px;
+  width:80px;
+  border-radius: 6px;
+  border: none;
+  border: 1px solid black;
+}
+
+#log{
+  position: relative;
+  left:7px;
+}

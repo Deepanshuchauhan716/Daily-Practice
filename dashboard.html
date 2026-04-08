@@ -23,15 +23,13 @@
 <body>
     <nav>
         <h1>Smart Libray<i class="fa-solid fa-book" id="book_icon"></i></h1>
-        <a href="#dashboard" class="nav_link">Dashboard</a>
+        <a href="dashboard.html" class="nav_link">Dashboard</a>
         <a href="index.html" class="nav_link">Login page</a>
         <a href="#issued_book" class="nav_link">Borrowed book</a>
         <a href="#return_book" class="nav_link">Return Book</a>
         <i class="fa-solid fa-bell"></i>
         <i class="fa-solid fa-earth-americas"></i>
-        <select>
-            <option value="">Admin</option>
-        </select>
+        <button class="logout" onclick="logout()">Log Out<i class="fa-solid fa-right-from-bracket" id="log"></i></button>
     </nav>
     <h1 class="dash">Dashboard</h1>
     <div class="card">
@@ -61,6 +59,7 @@
         <a href="#issueBook" class="an"><img src="img/a1.avif" alt="" class="a1">Issue a New Book</a>
         <a href="#retuen" class="an"><img src="img/a1.avif" alt="" class="a1">Return a Book</a>
     </div>
+    <script src="dashboard.js"></script>
 </body>
 
 </html>
