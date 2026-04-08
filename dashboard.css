@@ -1,0 +1,65 @@
+body{
+    margin: 0px;
+    padding:0px;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #E3ecFF, #F8FbFF);
+  font-family: "Momo Trust Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav{
+    height:30px;
+    background: #758ac3;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+a{
+    position: relative;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    transition: width 0.4s ease;
+}
+
+a:hover::after{
+    width: 100%;
+}
+a:focus::after,
+a.active::after{
+    width: 100%;
+}
+
+#book_icon{
+  color: black;
+  font-size: 30px;
+}
+
+select{
+  height:30px;
+  width:100px;
+  background-color: transparent;
+  color: white;
+  border:2px solid black;
+  border-radius: 6px;
+}
+
+.dash{
+  position: absolute;
+  left: 100px;
+  top:100px;
+}

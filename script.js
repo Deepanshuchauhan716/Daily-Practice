@@ -23,7 +23,7 @@ form.addEventListener("submit", function(dets) {
     }else if(password !== "1234"){
         ErrorText.style.display = "initial";
     }else{
-        alert("Login Successfully ✅");
+        window.location.href = "dashboard.html";
         form.reset();
     }
 
