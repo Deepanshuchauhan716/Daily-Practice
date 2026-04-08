@@ -30,5 +30,22 @@
         <button class="logout" onclick="logout()">Log Out<i class="fa-solid fa-right-from-bracket" id="log"></i></button>
     </nav>
      <h1 class="dash">Borrowed Books</h1>
+     <input type="number" placeholder="Search by Roll number" class="Search">
+     <button type="submit" class="Search_btn">Search</button>
+
+     <div class="card">
+        <table id="student_table" border="1px">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll NUmber</th>
+                    <th>Book issued</th>
+                    <th>Issued date</th>
+                    <th>Returned date</th>
+                    <th>Fine (Rupees)</th>
+                </tr>
+            </thead>
+        </table>
+     </div>
 </body>
 </html>
