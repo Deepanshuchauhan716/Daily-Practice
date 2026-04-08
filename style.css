@@ -179,3 +179,11 @@ body{
     top:506px;
 }
 
+.incorrect,.incorrect2,.enter_username{
+    position: absolute;
+    bottom:30px;
+    left:138px;
+    color: red;
+    display: none;
+    transition: 0.3s;
+}
