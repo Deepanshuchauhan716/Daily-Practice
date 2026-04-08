@@ -48,7 +48,7 @@ body{
 .card_heading3{
     position: relative;
     top:40px;
-    left:130px;
+    left:120px;
     margin-bottom: 60px;
     font-size: 14px;
     font-family: arial;
@@ -161,21 +161,21 @@ body{
     font-family: tahoma;
     position: absolute;
     font-size: 13px;
-    left:260px;
+    left:250px;
     top:330px;
 }
 .hello1{
     font-family: tahoma;
     position: absolute;
     font-size: 13px;
-    left:260px;
+    left:250px;
     top:420px;
 }
 .hello3{
     font-family: tahoma;
     position: absolute;
     font-size: 13px;
-    left:260px;
+    left:250px;
     top:506px;
 }
 
