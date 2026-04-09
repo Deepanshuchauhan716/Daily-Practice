@@ -2,6 +2,17 @@ document.querySelector(".issu").addEventListener("click", function(e){
 
     e.preventDefault(); // form reload rokega
 
+    function generateId(){
+      let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    let id = "";
+
+    for(let i = 0; i < 6; i++){
+        id += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+
+    return id;
+}
+
     // form se data uthao
     let name = document.querySelector(".StudentName").value;
     let roll = document.querySelector(".RollNumber").value;
@@ -16,6 +27,7 @@ document.querySelector(".issu").addEventListener("click", function(e){
         book: book,
         issueDate: issueDate,
         returnDate: returnDate,
+        id:generateId(),
         fine: 0
     };
 
