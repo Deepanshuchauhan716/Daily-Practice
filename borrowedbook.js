@@ -1,42 +1,40 @@
-function logout(){
+function logout() {
     localStorage.removeItem("isLoggedIn");
     window.location.href = "index.html";
 }
 
-function CalculateFine(returnDate){
+function CalculateFine(returnDate) {
     let today = new Date();
     let returnD = new Date(returnDate);
 
-    today.setHours(0,0,0,0);
-    returnD.setHours(0,0,0,0);
+    today.setHours(0, 0, 0, 0);
+    returnD.setHours(0, 0, 0, 0);
 
-    let diff = today - returnD;  
-
+    let diff = today - returnD;
     let daysLate = Math.floor(diff / (1000 * 60 * 60 * 24));
 
-    if(daysLate > 0){
+    if (daysLate > 0) {
         return daysLate * 10;
-    }else{
+    } else {
         return 0;
     }
 }
 
-window.onload = function(){
-
-    let data = JSON.parse(localStorage.getItem("students")) || [];
-
+function renderTable(students) {
     let tableBody = document.getElementById("table_body");
-    let update = false;
+    tableBody.innerHTML = "";
 
-    data.forEach(function(item){
+    let issuedBooks = students.filter(function(item) {
+        return item.status !== "returned";
+    });
 
-        let currentFine = CalculateFine(item.returnDate);
-         if(item.fine !== currentFine){
-            item.fine = currentFine;
-            updated = true;
-        }
+    if (issuedBooks.length === 0) {
+        tableBody.innerHTML = "<tr><td colspan='7'>No Books Issued</td></tr>";
+        return;
+    }
 
-
+    issuedBooks.forEach(function(item) {
+        let fineAmount = CalculateFine(item.returnDate);
         let row = document.createElement("tr");
 
         row.innerHTML = `
@@ -46,44 +44,60 @@ window.onload = function(){
             <td>${item.issueDate}</td>
             <td>${item.returnDate}</td>
             <td>${item.id}</td>
-            <td>${item.fine}</td>
+            <td>${fineAmount}</td>
         `;
-
         tableBody.appendChild(row);
     });
-};
+}
 
-document.querySelector(".Search_btn").addEventListener("click", function(){
-
-    let rollInput = document.querySelector(".Search").value.trim();
+function loadAndShowData() {
     let data = JSON.parse(localStorage.getItem("students")) || [];
-    let tableBody = document.getElementById("table_body"); 
+    let updated = false;
 
-    tableBody.innerHTML = "";
-    let found = false;
-
-    data.forEach(function(item){
-        if(String(item.roll) === rollInput){
-            found = true;
-
-             let fineAmount = CalculateFine(item.returnDate);
-            let row = document.createElement("tr");
-
-            row.innerHTML = `
-                <td>${item.name || ''}</td>
-                <td>${item.roll || ''}</td>
-                <td>${item.book || ''}</td>
-                <td>${item.issueDate || ''}</td>
-                <td>${item.returnDate || ''}</td>
-                <td>${item.id || ''}</td>
-             <td>${fineAmount}${"</td>"}                 
-            `;
-            tableBody.appendChild(row);
+    data.forEach(function(item) {
+        let currentFine = CalculateFine(item.returnDate);
+        if (item.fine !== currentFine) {
+            item.fine = currentFine;
+            updated = true;
         }
     });
 
-    if(!found){
-        tableBody.innerHTML = "<tr><td colspan='6'>No Data Found </td></tr>";
+    if (updated) {
+        localStorage.setItem("students", JSON.stringify(data));
     }
-});
 
+    renderTable(data);
+}
+
+window.onload = function() {
+    loadAndShowData();
+    
+    setInterval(function() {
+        let searchValue = document.querySelector(".Search").value.trim();
+        if (searchValue === "") {
+            loadAndShowData();
+        } else {
+            let data = JSON.parse(localStorage.getItem("students")) || [];
+            let filteredData = data.filter(function(item) {
+                return String(item.roll) === searchValue;
+            });
+            renderTable(filteredData);
+        }
+    }, 1000);
+};
+
+document.querySelector(".Search_btn").addEventListener("click", function() {
+    let rollInput = document.querySelector(".Search").value.trim();
+    let data = JSON.parse(localStorage.getItem("students")) || [];
+
+    if (rollInput === "") {
+        renderTable(data);
+        return;
+    }
+
+    let filteredData = data.filter(function(item) {
+        return String(item.roll) === rollInput;
+    });
+
+    renderTable(filteredData);
+});
