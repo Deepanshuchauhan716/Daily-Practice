@@ -29,14 +29,39 @@ function renderTable(students) {
     });
 
     if (issuedBooks.length === 0) {
-        tableBody.innerHTML = "<tr><td colspan='7'>No Books Issued</td></tr>";
+        tableBody.innerHTML = "<tr><td colspan='8'>No Books Issued</td></tr>";
         return;
     }
 
     issuedBooks.forEach(function(item) {
         let fineAmount = CalculateFine(item.returnDate);
+        
+        // 🔥 STATUS CHECK KARO
+        let today = new Date();
+        let returnDate = new Date(item.returnDate);
+        today.setHours(0, 0, 0, 0);
+        returnDate.setHours(0, 0, 0, 0);
+        
+        let statusText = "";
+        let statusColor = "";
+        
+        if (today > returnDate) {
+            statusText = "Late";
+            statusColor = "red";
+        } else {
+            statusText = "On Time";
+            statusColor = "green";
+        }
+        
         let row = document.createElement("tr");
-
+        
+        // 🔥 ROW KA BACKGROUND COLOR (Poori row)
+        if (today > returnDate) {
+            row.style.backgroundColor = "#ffcccc";  // Light red
+        } else {
+            row.style.backgroundColor = "#ccffcc";  // Light green
+        }
+        
         row.innerHTML = `
             <td>${item.name}</td>
             <td>${item.roll}</td>
@@ -45,6 +70,7 @@ function renderTable(students) {
             <td>${item.returnDate}</td>
             <td>${item.id}</td>
             <td>${fineAmount}</td>
+            <td><span style="color: ${statusColor}; font-weight: bold;">${statusText}</span></td>
         `;
         tableBody.appendChild(row);
     });
