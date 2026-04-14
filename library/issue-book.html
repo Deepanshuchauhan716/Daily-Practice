@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Book - Library Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>📚 Library Management System</h1>
+            <div class="nav-links">
+                <a href="index.html">Dashboard</a>
+                <a href="issue-book.html">Issue Book</a>
+                <a href="return-book.html">Return Book</a>
+                <a href="view-books.html">Books</a>
+                <a href="view-students.html">Students</a>
+                <a href="fine-report.html">Fine Report</a>
+            </div>
+        </nav>
+
+        <div class="form-container">
+            <h2>Issue New Book</h2>
+            <form id="issueBookForm">
+                <div class="form-group">
+                    <label>Student Roll Number:</label>
+                    <input type="text" id="rollNo" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Student Name:</label>
+                    <input type="text" id="studentName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Course:</label>
+                    <select id="course" required>
+                        <option value="">Select Course</option>
+                        <option value="BCA">BCA</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="MBA">MBA</option>
+                        <option value="MCA">MCA</option>
+                        <option value="B.Sc">B.Sc</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number:</label>
+                    <input type="tel" id="phone" pattern="[0-9]{10}" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Book Name:</label>
+                    <input type="text" id="bookName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Book ID:</label>
+                    <input type="text" id="bookId" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Issue Date:</label>
+                    <input type="date" id="issueDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Due Date (15 days from issue):</label>
+                    <input type="date" id="dueDate" readonly>
+                </div>
+
+                <button type="submit" class="btn-submit">Issue Book</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

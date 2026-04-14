@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Book - Library Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>📚 Library Management System</h1>
+            <div class="nav-links">
+                <a href="index.html">Dashboard</a>
+                <a href="issue-book.html">Issue Book</a>
+                <a href="return-book.html">Return Book</a>
+                <a href="view-books.html">Books</a>
+                <a href="view-students.html">Students</a>
+                <a href="fine-report.html">Fine Report</a>
+            </div>
+        </nav>
+
+        <div class="form-container">
+            <h2>Return Book & Calculate Fine</h2>
+            <div class="form-group">
+                <label>Enter Transaction ID or Roll Number:</label>
+                <input type="text" id="searchTrans" placeholder="Enter Roll Number">
+                <button onclick="searchTransactions()" class="btn-search">Search</button>
+            </div>
+
+            <div id="transactionList"></div>
+
+            <div id="returnSection" style="display:none;">
+                <h3>Return Book</h3>
+                <div class="form-group">
+                    <label>Return Date:</label>
+                    <input type="date" id="returnDate">
+                </div>
+                <button onclick="calculateFine()" class="btn-submit">Calculate Fine</button>
+                
+                <div id="fineDetails" style="margin-top: 20px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
